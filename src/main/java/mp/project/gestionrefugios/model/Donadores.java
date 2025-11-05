@@ -1,5 +1,6 @@
 package mp.project.gestionrefugios.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,6 +10,7 @@ import org.hibernate.annotations.ColumnDefault;
 @Setter
 @Entity
 @Table(name = "donadores")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class Donadores {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

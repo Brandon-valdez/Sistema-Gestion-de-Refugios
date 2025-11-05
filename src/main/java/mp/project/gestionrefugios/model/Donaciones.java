@@ -1,5 +1,6 @@
 package mp.project.gestionrefugios.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +15,7 @@ import java.time.LocalDate;
 @Setter
 @Entity
 @Table(name = "donaciones")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class Donaciones {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
