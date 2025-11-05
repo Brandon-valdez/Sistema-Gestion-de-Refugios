@@ -40,8 +40,7 @@ public class Adopciones {
   @JoinColumn(name = "estado_id", nullable = false)
   private CatEstadoAdopcion estado;
 
-  @Lob
-  @Column(name = "observaciones")
+  @Column(name = "observaciones", columnDefinition = "TEXT")
   private String observaciones;
 
   @ColumnDefault("1")

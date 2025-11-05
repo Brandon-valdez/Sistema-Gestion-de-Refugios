@@ -49,8 +49,7 @@ public class Donaciones {
   @Column(name = "fecha", nullable = false)
   private LocalDate fecha;
 
-  @Lob
-  @Column(name = "observaciones")
+  @Column(name = "observaciones", columnDefinition = "TEXT")
   private String observaciones;
 
   @ColumnDefault("1")

@@ -20,8 +20,7 @@ public class TipoInventario {
   @Column(name = "nombre", nullable = false, length = 50)
   private String nombre;
 
-  @Lob
-  @Column(name = "descripcion")
+  @Column(name = "descripcion", columnDefinition = "TEXT")
   private String descripcion;
 
   @ColumnDefault("1")

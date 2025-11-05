@@ -48,8 +48,7 @@ public class Animales {
   @Column(name = "imagen")
   private String imagen;
 
-  @Lob
-  @Column(name = "observaciones")
+  @Column(name = "observaciones", columnDefinition = "TEXT")
   private String observaciones;
 
   @ManyToOne(fetch = FetchType.LAZY, optional = false)
